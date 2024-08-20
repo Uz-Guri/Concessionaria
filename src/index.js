@@ -5,7 +5,7 @@ const port = 3000
 
 app.use(express.json())
 
-app.get("/naipe", (req, res) => {
+app.get("/consecionaria", (req, res) => {
     const content = naipe_controller.index()
     res.json(content)
 })
