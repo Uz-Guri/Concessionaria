@@ -5,27 +5,27 @@ const port = 3000
 
 app.use(express.json())
 
-app.get("/consecionaria", (req, res) => {
+app.get("/concessionaria", (req, res) => {
     const content = naipe_controller.index()
     res.json(content)
 })
 
-app.get("/naipe/:id", (req, res) => {
+app.get("/concessionaria/:id", (req, res) => {
     const content = naipe_controller.show(req.params.id)
     res.json(content)
 })
 
-app.post("/naipe", (req, res) => {
+app.post("/concessionaria", (req, res) => {
     const code = naipe_controller.store(req.body)
     res.status(code).json()
 })
 
-app.put("/naipe/:id", (req, res) => {
+app.put("/concessionaria/:id", (req, res) => {
     const code = naipe_controller.update(req.params.id, req.body)
     res.status(code).json()
 })
 
-app.delete("/naipe/:id", (req, res) => {
+app.delete("/concessionaria/:id", (req, res) => {
     const code = naipe_controller.destroy(req.params.id)
     res.status(code).json()
 })
