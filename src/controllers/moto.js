@@ -4,9 +4,9 @@ let nextId = 1;
 
 const model = (body, id = nextId++) => {
     if(body.cor != undefined && 
-        body.nome != undefined && 
-        body.cor != "" && 
-        body.nome != "") {
+        body.marca != undefined && 
+        body.modelo != "" && 
+        body.tipo != "") {
             return {
             id,
             nome: body.nome,
