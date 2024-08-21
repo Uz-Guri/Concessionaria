@@ -3,15 +3,11 @@ const db = [];
 let nextId = 1;
 
 const model = (body, id = nextId++) => {
-    if(body.cor != undefined && 
-        body.marca != undefined && 
-        body.modelo != "" && 
-        body.tipo != "") {
+    if(body.marca != undefined && 
+        body.marca != "") {
             return {
             id,
             marca: body.marca,
-            modelo: body.modelo,
-            tipo: body.tipo
         };
     }
 };
